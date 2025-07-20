@@ -219,102 +219,142 @@ nav ul li a:hover {
 
 /* Hero */
 .hero {
-  background: var(--light-bg);
-  padding: 3rem 0;
-}
-.hero-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: space-between;
+  background: linear-gradient(to right, #fff8f0, #ffffff);
+  padding: 60px 20px;
 }
 
-.hero-text {
-  flex: 1 1 400px;
-}
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.hero-text h1 span {
-  color: var(--primary-orange);
-}
-.hero-text p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-}
-.hero-image {
-  flex: 1 1 500px;    /* Allows it to grow bigger */
+.hero-container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.hero-left {
+  flex: 1 1 55%;
+}
+
+.hero-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  animation: fadeInOut 1.5s ease-in-out forwards;
+}
+
+.reserve-form {
+  background-color: #f5720f;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.reserve-form:hover {
+  transform: translateY(-3px);
+}
+
+.reserve-form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.reserve-form input,
+.reserve-form select {
+  flex: 1 1 30%;
+  min-width: 150px;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.reserve-form input:focus,
+.reserve-form select:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.reserve-form button {
+  padding: 14px 30px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reserve-form button:hover {
+  background-color: #333;
+}
+
+.hero-image {
+  flex: 1 1 40%;
+  text-align: center;
+  animation: slideIn 1.5s ease forwards;
 }
 
 .hero-image img {
-  width: 100%;
-  max-width: 600px;   /* Make it larger */
+  width: 150%;
+  max-width: 600px;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: fadeInUp 1s ease-out both;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
 .hero-image img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column-reverse;
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
+  .hero-left,
   .hero-image {
+    flex: 1 1 100%;
+  }
+
+  .reserve-form .form-row {
+    flex-direction: column;
+  }
+
+  .reserve-form input,
+  .reserve-form select {
     width: 100%;
   }
-
-  .hero-image img {
-    max-width: 90%;
-  }
 }
-
-/* Entry animation */
-@keyframes fadeInUp {
-  from {
+@keyframes fadeInOut {
+  0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(-20px);
   }
-  to {
+  50% {
     opacity: 1;
     transform: translateY(0);
   }
+  100% {
+    opacity: 1;
+  }
 }
 
-.search-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.search-form input,
-.search-form button {
-  padding: 0.6rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  flex: 1 1 150px;
-}
-.search-form button {
-  background: var(--accent-blue);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.search-form button:hover {
-  background: #1952a6;
-}
 
 /* Sections */
 section {
@@ -395,106 +435,165 @@ section h2 {
 }
 
 /* About */
-/* About Section */
-.about {
-  background: var(--light-bg);
-  padding: 4rem 0;
+.about-section {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
 }
 
-.about-content {
+.about-outer-box {
+  max-width: 1300px;
+  margin: auto;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+}
+
+.about-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-map-box {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  justify-content: flex-start;
 }
 
-.about-image {
-  flex: 1 1 400px;
-  text-align: center;
-  animation: fadeInLeft 1s ease forwards;
+.map-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  background: #ff6600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-.about-image img {
+
+.about-map-img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
-.about-image img:hover {
+.about-map-img:hover {
   transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.about-info {
+  flex: 1 1 50%;
+  padding: 50px 20px 30px;
+  overflow-y: auto;        
+  height: 500px;           
+  padding-right: 10px;
+}
+
+.about-info::-webkit-scrollbar {
+  width: 8px;
+}
+.about-info::-webkit-scrollbar-thumb {
+  background-color: #ff6600;
+  border-radius: 4px;
+}
+.about-info::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
 }
 
 
-.about-text {
-  flex: 1 1 500px;
-  animation: fadeInRight 1s ease forwards;
+.about-info h2 {
+  color: #ff6600;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  cursor: default;
+  color: #ff6600;
+  margin-bottom: 20px;
+  transition: color 0.3s ease-in-out;
 }
-.about-text h2 {
-  margin-bottom: 1rem;
-  color: var(--accent-blue);
+
+/* Underline effect */
+.about-info h2::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  background-color: #ff6600;
+  transition: width 0.4s ease-in-out;
 }
-.about-text p {
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
+
+/* On hover, animate underline in */
+.about-info h2:hover::after {
+  width: 100%;
+}
+
+.about-info p,
+.about-info ul {
+  font-size: 1rem;
+  color: #444;
   line-height: 1.6;
-}
-.about-text ul {
-  padding-left: 1.2rem;
-  margin-bottom: 1rem;
-}
-.about-text ul li {
-  margin-bottom: 0.8rem;
-  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-/* Animations */
-@keyframes fadeInLeft {
+.about-info ul {
+  padding-left: 20px;
+}
+
+.about-info li {
+  margin-bottom: 10px;
+}
+
+/* Slide-in animation for "Our Locations" */
+@keyframes slideDownFade {
   0% {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.map-title {
+  animation: slideDownFade 0.8s ease-in-out forwards;
 }
 
-/* Mobile adjustments */
+/* Fade-in animation for company content */
+@keyframes fadeInContent {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.about-info {
+  animation: fadeInContent 1s ease-in-out;
+}
+
+/* Optional: Icons for headings using pseudo-elements */
+.about-info h2::before {
+  content: "🚗 ";
+  display: inline-block;
+  margin-right: 8px;
+}
+
 @media (max-width: 768px) {
-  .about-content {
+  .about-container {
     flex-direction: column;
-    text-align: center;
   }
-  .about-text {
-    animation: fadeInUp 1s ease forwards;
-  }
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  .map-title {
+    font-size: 1.2rem;
+    padding: 10px 18px;
   }
 }
-
 
 /* Reviews */
 .reviews {

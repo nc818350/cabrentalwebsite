@@ -41,24 +41,41 @@
 
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1>Looking to <span>Rent a Cab?</span></h1>
-        <p>Quick, reliable and affordable cab rentals for your every journey.</p>
-        <form class="search-form" id="search-form">
-          <input type="text" placeholder="Enter Location" id="location" required />
-          <input type="date" id="start-date" required/>
-          <input type="date" id="end-date" required/>
-          <button type="submit">Search Ride</button>
-        </form>
-      </div>
-      <div class="hero-image">
-        <img src="verna4.jpg" alt="Car Image" class="animated-hero-img" />
-      </div>
-
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-left">
+      <h1 class="hero-heading">Looking for rent a cab?</h1>
+      <form class="reserve-form">
+        <div class="form-row">
+          <input type="text" placeholder="Pick-up Location" />
+          <input type="text" placeholder="Drop-off Location" />
+          <select>
+            <option value="">Car Type</option>
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="suv">Van</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <input type="date" />
+          <input type="time" />
+          <input type="text" placeholder="Phone Number" />
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="City"/>
+          <input type="text" placeholder="Address"/>
+          <input type="text" placeholder="Email Address" />
+        </div>
+        <button type="submit">Reserve Now</button>
+      </form>
     </div>
-  </section>
+    <div class="hero-image">
+      <img src="verna4.jpg" alt="Car image" />
+    </div>
+  </div>
+</section>
+
+
 
   <!-- How It Works -->
   <section id="ride" class="steps">
@@ -108,14 +125,20 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="about">
-    <div class="container about-content">
-      <div class="about-image">
-        <img src="bmw.jpg" alt="About Car" />
+<section id="about" class="about-section">
+  <div class="about-outer-box">
+    <div class="about-container">
+      <!-- Left: Title + Map -->
+      <div class="about-map-box">
+        <h2 class="map-title">Our Locations</h2>
+        <img src="map.jpg" alt="Our Locations Map" class="about-map-img">
       </div>
-      <div class="about-text">
+
+      <!-- Right: Company Info -->
+      <div class="about-info">
         <h2>Company Profile</h2>
-        <p>We, Rentomatic Ride Private Limited introduce ourselves as a fast growing Car rental company,
+        <p>
+          We, Rentomatic Ride Private Limited introduce ourselves as a fast growing Car rental company,
           specializing in Corporate Chauffeur Drive services by semi luxury and luxury cars. It is a up raising 
           car rental company in India established in Jul’2022 and started operation since Sep’2022. We, 
           Rentomatic Ride provide Quality Brand cars for affordable rates. We have collaborated with leading
@@ -123,41 +146,39 @@
           organizations; we also cater to miscellaneous private requirements. We offer our exceedingly 
           top-quality services to our customers.
         </p>
+
         <h2>Company's Strength</h2>
-        <ul >
+        <ul>
           <li>As part of this service that we are proud of, we maintain our fleet immaculate condition and 
           assure they are always of the best breed and model. All our vehicles are the latest models in their 
           segments ensuring safety and comfort at all the times. In the unlikely event of delayed service due 
           to any technical snag, we immediately deploy our backup system, guaranteeing that our passengers 
-          never arrive late.<br><br></li>
-
+          never arrive late.
+          </li>
           <li>Our major asset is our drivers/associates, whom we have meticulously handpicked as the best for 
           the job and then further extensively trained in-house to achieve and maintain our prime objectives. 
           The drivers are all equipped with phones keeping our drivers in constant contact allows us to 
-          monitor their efficiency in upholding our customers consistently and reliably.<br><br></li>
-
+          monitor their efficiency in upholding our customers consistently and reliably.
+          </li>
           <li>Company has an experienced Business Team, who have worked with India’s top Car Rental 
           Companies for more than a decade and supported business in making strategies & plan for growth 
-          of the company.<br><br></li>
+          of the company.
+          </li>
         </ul>
 
         <h2>Company's Network</h2>
         <ul>
-          <li>We are well established in our operations in all Metro cities including Tier-2&3 cities
-          on Pan India Level. We proudly announce a great association with more than 100 best associates 
-          maintaining “more than 500 A-Class Fleet in all segments on Pan India Level”.<br><br></li>
-
-          <li>We are pleased to have a great relationship with India’s biggest Car Rental Companies & professionals to serve
-          largest Corporates in India, i.e. Amazon, Bosch, Insurance Dekho, Dell, Google, ILS India, Micron, Reddy Labs, 
-          Times Group, Tech Mahindra, Unibic, Uniparts & Vindhya Telelinks Ltd (A Birla Group Company) along with Retail Customers
-          on Pan India Level.<br><br></li>
-
-          <li>We have a great associations with best Financial Institutions (NBFC) & Bankers of India.<br><br></li>
+          <li>We are well established in our operations in all Metro cities including Tier-2&3 cities on Pan India Level. We proudly announce a great association with more than 100 best associates maintaining “more than 500 A-Class Fleet in all segments on Pan India Level”.
+          </li>
+          <li>We are pleased to have a great relationship with India’s biggest Car Rental Companies & professionals to serve largest Corporates in India, i.e. Amazon, Bosch, Insurance Dekho, Dell, Google, ILS India, Micron, Reddy Labs, Times Group, Tech Mahindra, Unibic, Uniparts & Vindhya Telelinks Ltd (A Birla Group Company) along with Retail Customers on Pan India Level.
+          </li>
+          <li>We have a great associations with best Financial Institutions (NBFC) & Bankers of India.
+          </li>
         </ul>
-        <a href="#" class="btn-primary">Learn More</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Reviews -->
   <section id="reviews" class="reviews">
