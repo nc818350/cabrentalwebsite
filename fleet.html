@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Fleet - Rentomatic Ride</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Rentomatic Logo" />
+      <span>Rentomatic Ride</span>
+    </div>
+
+    <nav>
+      <div id="hamburger">&#9776;</div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fleet.html" class="active">Fleet</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="ratechart.html">Rate Chart</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <!-- Fleet Section -->
+  <section class="fleet-section">
+    <h2>Our Fleet</h2>
+
+    <div class="filter-container">
+      <label for="vehicleType">Filter by Type:</label>
+      <select id="vehicleType">
+        <option value="all">All</option>
+        <option value="hatchback">Mid-Size Sedan</option>
+        <option value="sedan">Van/SUV</option>
+        <option value="suv">Premium Van</option>
+        <option value="luxury">Multi Utility Vehicles</option>
+        <option value="luxury">Premium/Luxury</option>
+
+      </select>
+    </div>
+
+    <div class="fleet-grid" id="fleetGrid">
+
+      <div class="car-card" data-type="sedan">
+        <img src="images/sedan1.jpg" alt="Sedan Car" />
+        <h3>Honda City</h3>
+        <button class="details-btn" onclick="openPopup('Honda City', 'Comfortable mid-size sedan with AC, driver, and luggage space.')">View Details</button>
+        <button class="book-btn">Book Now</button>
+      </div>
+      <div class="car-card" data-type="sedan">
+        <img src="images/sedan1.jpg" alt="Sedan Car" />
+        <h3>Honda City</h3>
+        <button class="details-btn" onclick="openPopup('Honda City', 'Comfortable mid-size sedan with AC, driver, and luggage space.')">View Details</button>
+        <button class="book-btn">Book Now</button>
+      </div>
+      <div class="car-card" data-type="sedan">
+        <img src="images/sedan1.jpg" alt="Sedan Car" />
+        <h3>Honda City</h3>
+        <button class="details-btn" onclick="openPopup('Honda City', 'Comfortable mid-size sedan with AC, driver, and luggage space.')">View Details</button>
+        <button class="book-btn">Book Now</button>
+      </div>
+      <div class="car-card" data-type="sedan">
+        <img src="images/sedan1.jpg" alt="Sedan Car" />
+        <h3>Honda City</h3>
+        <button class="details-btn" onclick="openPopup('Honda City', 'Comfortable mid-size sedan with AC, driver, and luggage space.')">View Details</button>
+        <button class="book-btn">Book Now</button>
+      </div>
+      <div class="car-card" data-type="sedan">
+        <img src="images/sedan1.jpg" alt="Sedan Car" />
+        <h3>Honda City</h3>
+        <button class="details-btn" onclick="openPopup('Honda City', 'Comfortable mid-size sedan with AC, driver, and luggage space.')">View Details</button>
+        <button class="book-btn">Book Now</button>
+      </div>
+      <div class="car-card" data-type="sedan">
+        <img src="images/sedan1.jpg" alt="Sedan Car" />
+        <h3>Honda City</h3>
+        <button class="details-btn" onclick="openPopup('Honda City', 'Comfortable mid-size sedan with AC, driver, and luggage space.')">View Details</button>
+        <button class="book-btn">Book Now</button>
+      </div>
+      <div class="car-card" data-type="sedan">
+        <img src="images/sedan1.jpg" alt="Sedan Car" />
+        <h3>Honda City</h3>
+        <button class="details-btn" onclick="openPopup('Honda City', 'Comfortable mid-size sedan with AC, driver, and luggage space.')">View Details</button>
+        <button class="book-btn">Book Now</button>
+      </div>
+      <div class="car-card" data-type="sedan">
+        <img src="images/sedan1.jpg" alt="Sedan Car" />
+        <h3>Honda City</h3>
+        <button class="details-btn" onclick="openPopup('Honda City', 'Comfortable mid-size sedan with AC, driver, and luggage space.')">View Details</button>
+        <button class="book-btn">Book Now</button>
+      </div>
+      <div class="car-card" data-type="sedan">
+        <img src="images/sedan1.jpg" alt="Sedan Car" />
+        <h3>Honda City</h3>
+        <button class="details-btn" onclick="openPopup('Honda City', 'Comfortable mid-size sedan with AC, driver, and luggage space.')">View Details</button>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <!-- Copy and update 15 more cards similarly -->
+      <!-- You can change categories: hatchback, suv, luxury, etc. -->
+
+      <!-- Add 15 more cards here -->
+      <!-- You can replicate and change image, name, category -->
+
+    </div>
+  </section>
+
+  <!-- Popup Modal -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h3 id="popupTitle"></h3>
+      <p id="popupDesc"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+ <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-col company-info">
+      <h3>Rentomatic Ride Private Limited</h3>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> 80/59B, Malviya Nagar, New Delhi – 17</li>
+        <li><i class="fas fa-school"></i> 11/3, Near NDMC Boys School, Samalkha, Delhi – 37</li>
+        <li><i class="fas fa-envelope"></i> sales@rentomaticride.com, ops@rentomaticride.com</li>
+        <li><i class="fas fa-phone-alt"></i> +91-7048941020</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Spot Rental Service</a></li>
+        <li><a href="#">Airport Transfers</a></li>
+        <li><a href="#">Intercity & Intracity Services</a></li>
+        <li><a href="#">Employee Transportation</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Fleet</h4>
+      <ul>
+        <li><a href="#">Mid-Size Sedan</a></li>
+        <li><a href="#">Van / SUV</a></li>
+        <li><a href="#">Premium Van</a></li>
+        <li><a href="#">Premium / Luxury</a></li>
+        <li><a href="#">Multi Utility Vehicles</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-google-plus-g"></i></a>
+    </div>
+    <p>Copyright &copy; 2025 Rentomatic Ride Private Limited. All rights reserved.</p>
+  </div>
+ </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

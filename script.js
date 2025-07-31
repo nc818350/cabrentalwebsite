@@ -1,8 +1,15 @@
-//preloader
-window.addEventListener('load', () => {
-  const preloader = document.getElementById('preloader');
-  preloader.classList.add('hidden');
-});
+//preloader//
+
+window.addEventListener("load", () => {
+    // Show text after car moves
+    const preloader = document.getElementById("preloader");
+
+    // Wait for text animation (3s car + 1s text = 4s)
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+    }, 4500); // 4.5s total delay
+  });
+
 
 // Toggle mobile menu
 const hamburger = document.getElementById('hamburger');
@@ -28,12 +35,26 @@ document.getElementById('search-form').addEventListener('submit', (e) => {
   }
 });
 
-// Newsletter form validation
-document.getElementById('newsletter-form').addEventListener('submit', (e) => {
-  const email = document.getElementById('newsletter-email').value.trim();
-  if(email === "") {
-    e.preventDefault();
-    alert("Please enter your email.");
-  }
-});
+// Fleet 
+
+ const vehicleType = document.getElementById('vehicleType');
+    const fleetGrid = document.getElementById('fleetGrid');
+
+    vehicleType.addEventListener('change', function () {
+      const selected = this.value;
+      const cards = fleetGrid.querySelectorAll('.car-card');
+      cards.forEach(card => {
+        card.style.display = selected === 'all' || card.dataset.type === selected ? 'block' : 'none';
+      });
+    });
+
+    function openPopup(title, desc) {
+      document.getElementById('popupTitle').innerText = title;
+      document.getElementById('popupDesc').innerText = desc;
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
 

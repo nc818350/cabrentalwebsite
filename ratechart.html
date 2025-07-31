@@ -230,28 +230,28 @@
   </style>
 </head>
 <body>
-  <!-- Header with Navigation -->
+  <!-- Header -->
   <header>
-    <nav class="nav">
-      <div class="logo">
-        <a href="index.html">
-          <img src="Logo.jpg" alt="Rentomatic Ride Logo" />
-        </a>
-      </div>
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Rentomatic Logo" />
+      <span>Rentomatic Ride</span>
+    </div>
 
-      <div class="hamburger" >&#9776;</div>
-
-      <ul>
+    <nav>
+      <div id="hamburger">&#9776;</div>
+      <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#ride">Ride</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="fleet.html">Fleet</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
         <li><a href="ratechart.html">Rate Chart</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
+    </div>
   </header>
-
   <div class="rate-chart-page">
     <h1>Our Cab Rate Chart</h1>
     <div class="table-responsive">
@@ -305,36 +305,49 @@
     <a href="index.html" class="back-link">← Back to Home</a>
   </div>
 
-  <footer>
-    <div class="footer-columns">
-      <div>
-        <h4>Rentomatic Ride</h4>
-        <p>Reliable cab services at your fingertips.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="ratechart.html">Rate Chart</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact Us</h4>
-        <p>Email: support@rentomaticride.com</p>
-        <p>Phone: +91 98765 43210</p>
-      </div>
+ <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-col company-info">
+      <h3>Rentomatic Ride Private Limited</h3>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> 80/59B, Malviya Nagar, New Delhi – 17</li>
+        <li><i class="fas fa-school"></i> 11/3, Near NDMC Boys School, Samalkha, Delhi – 37</li>
+        <li><i class="fas fa-envelope"></i> sales@rentomaticride.com, ops@rentomaticride.com</li>
+        <li><i class="fas fa-phone-alt"></i> +91-7048941020</li>
+      </ul>
     </div>
-    <p style="margin-top: 2rem;">&copy; 2025 Rentomatic Ride. All rights reserved.</p>
-  </footer>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Spot Rental Service</a></li>
+        <li><a href="#">Airport Transfers</a></li>
+        <li><a href="#">Intercity & Intracity Services</a></li>
+        <li><a href="#">Employee Transportation</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Fleet</h4>
+      <ul>
+        <li><a href="#">Mid-Size Sedan</a></li>
+        <li><a href="#">Van / SUV</a></li>
+        <li><a href="#">Premium Van</a></li>
+        <li><a href="#">Premium / Luxury</a></li>
+        <li><a href="#">Multi Utility Vehicles</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-google-plus-g"></i></a>
+    </div>
+    <p>Copyright &copy; 2025 Rentomatic Ride Private Limited. All rights reserved.</p>
+  </div>
+ </footer>
 
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav ul');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
