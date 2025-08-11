@@ -1,16 +1,16 @@
 //preloader//
 
-window.addEventListener("load", () => {
-    // Show text after car moves
-    const preloader = document.getElementById("preloader");
-
-    // Wait for text animation (3s car + 1s text = 4s)
+window.addEventListener('load', () => {
     setTimeout(() => {
-      preloader.classList.add("hidden");
-    }, 4500); // 4.5s total delay
+      const preloader = document.getElementById('preloader');
+      preloader.style.transition = 'opacity 0.5s ease';
+      preloader.style.opacity = '0';
+
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500); // match fade-out duration
+    }, 1600); // wait for car animation (1.5s) + slight buffer
   });
-
-
 // Toggle mobile menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');

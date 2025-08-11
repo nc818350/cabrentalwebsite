@@ -23,9 +23,10 @@ body {
 
 .car {
   height: 150px;
-  width: 250px;
+  width: 500px;
+  object-fit: fill;
   position: relative;
-  animation: drive 3s ease-in-out forwards;
+  animation: drive 2s ease-in-out forwards;
 }
 
 /* Smooth left-to-right car movement */
@@ -54,44 +55,21 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  flex-direction: column;
+  overflow: hidden;
 }
 
-/* Car animation */
 #preloader-car {
   position: absolute;
-  left: -200px;
+  left: -150px;
+  bottom: 60px;
   width: 120px;
-  animation: driveAcross 3s ease-in-out forwards;
+  animation: driveAcross 1.5s ease-in-out forwards;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
 }
 
-/* Text appears after car finishes */
-#preloader-text {
-  font-size: 28px;
-  color: orange;
-  margin-top: 160px;
-  opacity: 0;
-  animation: showText 1s ease-in-out 3.2s forwards;
-}
-
-/* When hidden */
-#preloader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-  pointer-events: none;
-}
-
-/* Animations */
 @keyframes driveAcross {
   to {
     left: 100%;
-  }
-}
-
-@keyframes showText {
-  to {
-    opacity: 1;
   }
 }
 
@@ -100,7 +78,7 @@ body {
 .hidden {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1s ease, visibility 1s ease;
+  transition: opacity 0.1s ease, visibility 0.1s ease;
 }
 
 /* Header */
