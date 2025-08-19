@@ -9,30 +9,43 @@
 <body>
 
   <!-- Navbar -->
-  <header>
+<header>
   <div class="container nav-container">
     <div class="logo">
       <img src="Logo.jpg" alt="Rentomatic Logo" />
       <span>Rentomatic Ride</span>
     </div>
+  <nav>
+    <!-- Hamburger Menu Icon for Mobile -->
+    <div id="hamburger">&#9776;</div>
 
-    <nav>
-      <div id="hamburger">&#9776;</div>
-      <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="fleet.html" class="active">Fleet</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="ratechart.html">Rate Chart</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-    </div>
-  </header>
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">
+          Fleet <span class="arrow">▼</span>
+        </a>
+        <div class="dropdown-content">
+          <a href="mid-size sedan.html">Mid-Size Sedan</a>
+          <a href="van.html">Van / SUV</a>
+          <a href="premium-van.html">Premium Van</a>
+          <a href="luxury.html">Premium / Luxury</a>
+          <a href="multi-utility.html">Multi Utility Vehicles</a>
+        </div>
+      </li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="ratechart.html">Rate Chart</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <!-- Fleet Section -->
-  <section class="fleet-section">
+  <section class="fleet-section-1">
     <h2>Our Fleet</h2>
 
     <div class="filter-container">
@@ -105,12 +118,6 @@
         <button class="book-btn">Book Now</button>
       </div>
 
-      <!-- Copy and update 15 more cards similarly -->
-      <!-- You can change categories: hatchback, suv, luxury, etc. -->
-
-      <!-- Add 15 more cards here -->
-      <!-- You can replicate and change image, name, category -->
-
     </div>
   </section>
 
@@ -168,7 +175,6 @@
   </div>
  </footer>
 
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
